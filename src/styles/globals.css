@@ -22,5 +22,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/images/fundo.png"); /* Caminho dentro da pasta public */
+  background-size: cover; /* cobre a tela inteira */
+  background-position: center; /* centraliza a imagem */
+  background-attachment: fixed; /* dá o efeito de "parallax" */
+  background-repeat: no-repeat;
 }
