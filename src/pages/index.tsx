@@ -74,6 +74,34 @@ const Page = () => {
             </div>
           </div>
         </div>
+
+        {/*Curriculo */}
+        <div className="w-full py-14">
+          <div className="flex flex-col  sm:flex-row justify-center items-center ">
+            <img
+              src="/images/curriculo.jpg"
+              alt=""
+              className="w-[300px] h-[300px] rounded-lg shadow"
+            />
+
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-[25px] sm:text-[25px] lg:text-[29px] font-semibold mt-4">
+                Ficou interessado ?
+              </h1>
+
+              <ContactMe />
+              <p className="mt-7 font-semibold">Ou</p>
+              <h2 className="font-semibold">Baixe meu curriculo:</h2>
+              <a
+                className="bg-gray-950 text-white px-3 py-2 mt-4 rounded-lg shadow-2xl shadow-gray-950 hover:scale-105"
+                href="/curriculo.pdf"
+                download
+              >
+                Currículo
+              </a>
+            </div>
+          </div>
+        </div>
       </Layout>
     </div>
   );

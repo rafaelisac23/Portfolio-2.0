@@ -20,6 +20,16 @@ export const Layout = ({ children }: Props) => {
 
         <div className="flex w-2/4 justify-around items-center">
           <Link
+            href={"/contact"}
+            className={
+              path === "/contact"
+                ? "bg-gray-950 px-2 py-2 rounded-lg text-white shadow-xl"
+                : "hover:bg-gray-100 hover:px-2 hover:py-2 hover:rounded-lg hover:text-black hover:shadow-xl "
+            }
+          >
+            Contatos
+          </Link>
+          <Link
             href={"/projects"}
             className={
               path === "/projects"
@@ -64,11 +74,17 @@ export const Layout = ({ children }: Props) => {
       </button>
 
       {/* Conteúdo com padding-top suficiente */}
-      <div className="pt-20 md:pt-24">{children}</div>
+      {/* Estrutura para fixar o footer na base */}
+      <div className="min-h-screen flex flex-col">
+        {/* Conteúdo com padding-top e que ocupa espaço restante */}
+        <main className="pt-20 md:pt-24 flex-grow">{children}</main>
 
-      <footer className="w-full text-center py-4 text-[12px] sm:text-sm  text-gray-500 mt-10 bg-black">
-        © {new Date().getFullYear()} Rafael Isac. Todos os direitos reservados.
-      </footer>
+        {/* Footer fixado ao fim da tela quando o conteúdo for curto */}
+        <footer className="w-full text-center py-4 text-[12px] sm:text-sm text-gray-500 bg-black">
+          © {new Date().getFullYear()} Rafael Isac. Todos os direitos
+          reservados.
+        </footer>
+      </div>
 
       {/* Overlay */}
       {isOpen && (
@@ -102,14 +118,14 @@ export const Layout = ({ children }: Props) => {
             Meu resumo
           </Link>
           <Link
-            href="/about"
+            href="/contact"
             className={
-              path === "/about"
+              path === "/contact"
                 ? "block text-black hover:text-blue-500"
                 : `block text-gray-700 hover:text-blue-500`
             }
           >
-            Sobre
+            Contatos
           </Link>
           <Link
             href="/projects"
