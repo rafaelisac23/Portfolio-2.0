@@ -77,7 +77,7 @@ const Page = () => {
 
         {/*Curriculo */}
         <div className="w-full py-14">
-          <div className="flex flex-col  sm:flex-row justify-center items-center ">
+          <div className="flex flex-col  justify-center items-center sm:flex-row sm:gap-4 ">
             <img
               src="/images/curriculo.jpg"
               alt=""
