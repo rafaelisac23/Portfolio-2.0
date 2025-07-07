@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { EmailModal } from "../EmailModal/EmailModal";
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ export default function ContactForm() {
       );
 
       if (response.status === 200) {
-        alert("Mensagem enviada com sucesso!");
+        setOpen(true);
         formRef.current.reset();
       } else {
         const errorText = await response.text();
@@ -35,43 +37,47 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={handleSubmit}
-      className="w-[300px] sm:w-[400px] mx-auto p-4 bg-white rounded shadow space-y-4"
-    >
-      <h2 className="text-xl font-bold text-center">Entre em Contato</h2>
-
-      <input
-        type="text"
-        name="from_name"
-        placeholder="Seu nome"
-        required
-        className="w-full p-2 border border-gray-300 rounded"
-      />
-
-      <input
-        type="email"
-        name="reply_to"
-        placeholder="Seu e-mail"
-        required
-        className="w-full p-2 border border-gray-300 rounded"
-      />
-
-      <textarea
-        name="message"
-        rows={4}
-        placeholder="Sua mensagem"
-        required
-        className="w-full p-2 border border-gray-300 rounded"
-      />
-
-      <button
-        type="submit"
-        className="w-full bg-gray-950 text-white py-2 rounded hover:bg-blue-700"
+    <>
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="w-[300px] sm:w-[400px] mx-auto p-4 bg-white rounded shadow space-y-4"
       >
-        Enviar
-      </button>
-    </form>
+        <h2 className="text-xl font-bold text-center">Entre em Contato</h2>
+
+        <input
+          type="text"
+          name="from_name"
+          placeholder="Seu nome"
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+
+        <input
+          type="email"
+          name="reply_to"
+          placeholder="Seu e-mail"
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+
+        <textarea
+          name="message"
+          rows={4}
+          placeholder="Sua mensagem"
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-gray-950 text-white py-2 rounded hover:bg-blue-700"
+        >
+          Enviar
+        </button>
+      </form>
+
+      {open && <EmailModal open={setOpen} />}
+    </>
   );
 }

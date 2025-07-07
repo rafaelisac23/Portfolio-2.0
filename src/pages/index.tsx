@@ -6,13 +6,13 @@ const Page = () => {
   return (
     <div className="w-full">
       <Layout>
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full min-h-screen flex flex-col justify-center items-center">
           <Image
             alt=""
             src={"/images/Personagem.jpg"}
             width={250}
             height={250}
-            className="md:mt-16 lg:mt-14 mt-8 sm:mt-0 shadow  rounded-lg  "
+            className="md:mt-16 lg:mt-0 mt-8 sm:mt-0 shadow  rounded-lg  "
           />
 
           <div className="flex justify-center items-center  mt-12 not-even: gap-2 rounded-md bg-white shadow-2xl shadow-gray-950 border-gray-200 border w-[250px] p-1">

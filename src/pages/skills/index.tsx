@@ -25,7 +25,7 @@ const Page = () => {
           {/*Conteudo Skills Mobile*/}
 
           {/*Conteudo Desktop*/}
-          <div className="w-full border flex justify-center">
+          <div className="w-full border hidden justify-center  lg:flex">
             {/*parte branca */}
             <div className="w-[1000px] bg-white flex-col p-2 rounded-lg">
               {/*head */}

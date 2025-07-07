@@ -13,7 +13,7 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       {/* Navbar Desktop */}
-      <nav className="hidden md:flex  w-3/4 justify-around items-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-xl rounded-lg py-3 z-50 ">
+      <nav className="hidden md:flex  w-[70%] xl:w-[40%] justify-around items-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-xl rounded-lg py-3 z-50 ">
         <button className="bg-blue-800 px-4 py-1 rounded-md text-white shadow-xl hover:scale-105">
           RAFAEL
         </button>
