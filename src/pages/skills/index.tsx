@@ -1,20 +1,42 @@
 import { CardSkill } from "@/components/CardSkill/CardSkill";
+import { ContactMe } from "@/components/ContactMeButton/ContactMe";
 import { Layout } from "@/components/layout/Layout";
+import { SkillTableItem } from "@/components/SkillsTableItem/SkillsTableItem";
 import {
   CardSkillLanguageData,
   CardSkillFrontEndData,
   CardSkillDataBaseData,
   CardSkillToolsData,
+  CardSkillCursosData,
 } from "@/utils/data/CardSkillData";
+import Image from "next/image";
 
 const Page = () => {
   return (
     <div className="w-full ">
       <Layout>
+        <div className="w-full mt-10 mb-32 flex flex-col justify-center items-center">
+          <Image
+            alt=""
+            src={"/images/skills.jpg"}
+            width={250}
+            height={250}
+            className="md:mt-16 lg:mt-0 mt-8 sm:mt-0 shadow  rounded-lg  "
+          />
+
+          <div className="w-full  mt-8 sm:mt-6 flex flex-col justify-center items-center">
+            <h1 className="w-[310px] sm:w-[500px] text-[20px] sm:text-[25px] lg:text-[29px] font-semibold text-center">
+              "Um pouco do que sou capaz de construir!"
+            </h1>
+            <h2 className="w-[310px] text-[13px] lg:text-[14px] sm:w-[400px] lg:w-[500px] text-gray-800 text-center mt-4 sm:mt-2 lg:mt-2">
+              Conheça um pouco das habilidades e aprendizados que adquiri com o
+              tempo.
+            </h2>
+
+            <ContactMe />
+          </div>
+        </div>
         <div className="w-full  flex flex-col justify-center items-center ">
-          <h1 className="font-semibold text-black text-2xl mt-4 mb-6">
-            Minhas Skills e Stacks
-          </h1>
           {/*Conteudo Skills Mobile*/}
           <div className="w-full flex flex-col  justify-center items-center lg:hidden">
             <CardSkill CardSkillData={CardSkillLanguageData} />
@@ -25,23 +47,48 @@ const Page = () => {
           {/*Conteudo Skills Mobile*/}
 
           {/*Conteudo Desktop*/}
-          <div className="w-full border hidden justify-center  lg:flex">
+          <div className="w-full  hidden justify-center  lg:flex">
             {/*parte branca */}
             <div className="w-[1000px] bg-white flex-col p-2 rounded-lg">
               {/*head */}
               <div className="flex gap-1 w-full ">
-                <div className="bg-gray-200 min-w-64  h-10 pl-1">Categoria</div>
-                <div className="bg-yellow-500 flex-1">Skills&Tools</div>
+                <div className="bg-gray-200 min-w-64  h-10 pl-1 flex items-center rounded-tl-md">
+                  Categoria
+                </div>
+                <div className=" flex-1 bg-gray-200  h-10 pl-1 flex items-center rounded-tr-md">
+                  Skills&Tools
+                </div>
               </div>
               {/*head */}
 
               {/*body */}
-              <div className="bg-blue-500">b</div>
+              <div className=" flex flex-col">
+                <SkillTableItem data={CardSkillLanguageData} />
+                <SkillTableItem data={CardSkillFrontEndData} />
+                <SkillTableItem data={CardSkillDataBaseData} />
+                <SkillTableItem data={CardSkillToolsData} />
+              </div>
               {/*body */}
             </div>
             {/*parte branca */}
           </div>
           {/*Conteudo Desktop*/}
+        </div>
+
+        <div className="w-full bg-white mt-20 flex flex-col justify-center items-center pt-10 pb-14">
+          <h1 className="text-[25px]">Cursos</h1>
+          <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3 mt-10 justify-items-center gap-2">
+            {CardSkillCursosData.item
+              .sort((a, b) => a.text.localeCompare(b.text))
+              .map((item) => (
+                <p className="text-[14px] md:text-[17px]  ">
+                  <span className="font-semibold">
+                    {item.text.split("-")[0]}
+                  </span>
+                  -{item.text.split("-")[1]}
+                </p>
+              ))}
+          </div>
         </div>
       </Layout>
     </div>

@@ -27,7 +27,7 @@ const Page = () => {
 
           <div className="w-full  mt-8 sm:mt-6 flex flex-col justify-center items-center">
             <h1 className="w-[310px] sm:w-[500px] text-[20px] sm:text-[25px] lg:text-[29px] font-semibold text-center">
-              Eu construo soluções Front-end que realmente funcionam!
+              "Eu construo soluções Front-end que realmente funcionam!"
             </h1>
             <h2 className="w-[310px] text-[13px] lg:text-[14px] sm:w-[400px] lg:w-[500px] text-gray-800 text-center mt-4 sm:mt-2 lg:mt-2">
               Código, bugs e café da manhã mantêm tudo funcionando. Transformo
