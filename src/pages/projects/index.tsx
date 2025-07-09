@@ -13,7 +13,13 @@ const Page = () => {
         <title>Projetos!</title>
       </Head>
       <Layout>
-        <div className="w-full min-h-screen flex flex-col justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full min-h-screen flex flex-col justify-center items-center"
+        >
           <Image
             alt=""
             src={"/images/construindo.jpg"}
@@ -34,9 +40,15 @@ const Page = () => {
 
             <ContactMe />
           </div>
-        </div>
+        </motion.div>
         {/*parte branca */}
-        <div className="w-full bg-white mt-4 pt-12">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="w-full bg-white mt-4 pt-12"
+        >
           <h1 className=" text-center  text-2xl   font-semibold ">Projetos</h1>
 
           <section className="mt-14 flex flex-col  gap-12 w-full justify-center items-center pb-16">
@@ -44,7 +56,7 @@ const Page = () => {
               <CardProject item={item} key={index} />
             ))}
           </section>
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );

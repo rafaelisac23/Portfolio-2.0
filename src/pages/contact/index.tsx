@@ -1,10 +1,10 @@
 import ContactForm from "@/components/ContactForm/contactForm";
 import { Layout } from "@/components/layout/Layout";
 import Head from "next/head";
-import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const Page = () => {
   return (
@@ -13,7 +13,13 @@ const Page = () => {
         <title>Contato!</title>
       </Head>
       <Layout>
-        <div className=" flex flex-col mt-8  items-center  min-h-[475px] md:flex-row justify-center gap-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className=" flex flex-col mt-8  items-center  min-h-[475px] md:flex-row justify-center gap-10"
+        >
           <div className="flex flex-col w-[300px] ">
             <div>
               <h1 className="text-center font-semibold">
@@ -50,10 +56,10 @@ const Page = () => {
           </div>
           {/*Contatos */}
           {/*Email */}
-          <div className="my-10">
+          <motion.div className="my-10">
             <ContactForm />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Layout>
     </div>
   );
