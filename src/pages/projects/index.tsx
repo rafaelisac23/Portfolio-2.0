@@ -10,7 +10,8 @@ const Page = () => {
   return (
     <div className="w-full">
       <Head>
-        <title>Projetos!</title>
+        <title>Projetos</title>
+        <link rel="icon" href="/images/favicon-32x32.png" />
       </Head>
       <Layout>
         <motion.div
