@@ -11,6 +11,7 @@ import {
 } from "@/utils/data/CardSkillData";
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Page = () => {
   return (
@@ -19,7 +20,13 @@ const Page = () => {
         <title>Skills!</title>
       </Head>
       <Layout>
-        <div className="w-full min-h-screen  flex flex-col justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full min-h-screen  flex flex-col justify-center items-center"
+        >
           <Image
             alt=""
             src={"/images/skills.jpg"}
@@ -39,8 +46,14 @@ const Page = () => {
 
             <ContactMe />
           </div>
-        </div>
-        <div className="w-full  flex flex-col justify-center items-center ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full  flex flex-col justify-center items-center "
+        >
           {/*Conteudo Skills Mobile*/}
           <div className="w-full flex flex-col  justify-center items-center lg:hidden">
             <CardSkill CardSkillData={CardSkillLanguageData} />
@@ -77,9 +90,15 @@ const Page = () => {
             {/*parte branca */}
           </div>
           {/*Conteudo Desktop*/}
-        </div>
+        </motion.div>
 
-        <div className="w-full bg-white mt-20 flex flex-col justify-center items-center pt-10 pb-14">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full bg-white mt-20 flex flex-col justify-center items-center pt-10 pb-14"
+        >
           <h1 className="text-[25px]">Cursos</h1>
           <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3 mt-10 justify-items-center gap-2">
             {CardSkillCursosData.item
@@ -93,7 +112,7 @@ const Page = () => {
                 </p>
               ))}
           </div>
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );

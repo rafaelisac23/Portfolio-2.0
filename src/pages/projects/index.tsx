@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { CardSkillProjectsData } from "@/utils/data/CardSkillData";
 import { CardProject } from "@/components/CardProject/CardProject";
+import { motion } from "motion/react";
 
 const Page = () => {
   return (

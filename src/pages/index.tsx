@@ -2,6 +2,7 @@ import { ContactMe } from "@/components/ContactMeButton/ContactMe";
 import { Layout } from "@/components/layout/Layout";
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Page = () => {
   return (
@@ -10,7 +11,13 @@ const Page = () => {
         <title>Meu Portfolio!</title>
       </Head>
       <Layout>
-        <div className="w-full min-h-screen flex flex-col justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full min-h-screen flex flex-col justify-center items-center"
+        >
           <Image
             alt=""
             src={"/images/Personagem.jpg"}
@@ -40,9 +47,15 @@ const Page = () => {
 
             <ContactMe />
           </div>
-        </div>
+        </motion.div>
         {/*parte branca */}
-        <div className="w-full bg-white mt-20 flex flex-col items-center py-20  ">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full bg-white mt-20 flex flex-col items-center py-20  "
+        >
           <div className="flex flex-col gap-6 md:flex-row justify-center items-center">
             <div className="w-[300px] h-[300px] md:w-[330px] md:h-[330px] ">
               <img
@@ -75,10 +88,16 @@ const Page = () => {
               <ContactMe />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/*Curriculo */}
-        <div className="w-full py-14">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="w-full py-14"
+        >
           <div className="flex flex-col  justify-center items-center sm:flex-row sm:gap-4 ">
             <img
               src="/images/curriculo.jpg"
@@ -103,7 +122,7 @@ const Page = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Layout>
     </div>
   );
