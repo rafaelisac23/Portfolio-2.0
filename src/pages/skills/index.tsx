@@ -9,13 +9,17 @@ import {
   CardSkillToolsData,
   CardSkillCursosData,
 } from "@/utils/data/CardSkillData";
+import Head from "next/head";
 import Image from "next/image";
 
 const Page = () => {
   return (
     <div className="w-full ">
+      <Head>
+        <title>Skills!</title>
+      </Head>
       <Layout>
-        <div className="w-full mt-10 mb-32 flex flex-col justify-center items-center">
+        <div className="w-full min-h-screen  flex flex-col justify-center items-center">
           <Image
             alt=""
             src={"/images/skills.jpg"}
@@ -81,7 +85,7 @@ const Page = () => {
             {CardSkillCursosData.item
               .sort((a, b) => a.text.localeCompare(b.text))
               .map((item) => (
-                <p className="text-[14px] md:text-[17px]  ">
+                <p className="text-[14px] md:text-[17px]  " key={item.id}>
                   <span className="font-semibold">
                     {item.text.split("-")[0]}
                   </span>

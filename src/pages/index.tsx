@@ -1,10 +1,14 @@
 import { ContactMe } from "@/components/ContactMeButton/ContactMe";
 import { Layout } from "@/components/layout/Layout";
+import Head from "next/head";
 import Image from "next/image";
 
 const Page = () => {
   return (
     <div className="w-full">
+      <Head>
+        <title>Meu Portfolio!</title>
+      </Head>
       <Layout>
         <div className="w-full min-h-screen flex flex-col justify-center items-center">
           <Image
@@ -61,16 +65,14 @@ const Page = () => {
                 React e Next.js, criando interfaces modernas, rápidas e
                 intuitivas.
               </p>
-              <p className="text-justify mt-4  text-gray-800 md:text-[14px] ">
+              <p className="text-justify mt-4  text-gray-800 md:text-[14px] mb-6 ">
                 Gosto de construir soluções que escalem, façam sentido e se
                 mantenham firmes sob pressão (na maioria das vezes). Desafios
                 complexos? Pode mandar. Transformo caos em soluções limpas,
                 funcionais e bem pensadas.
               </p>
 
-              <div className="mt-4">
-                <ContactMe />
-              </div>
+              <ContactMe />
             </div>
           </div>
         </div>

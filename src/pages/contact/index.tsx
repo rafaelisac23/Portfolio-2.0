@@ -1,5 +1,6 @@
 import ContactForm from "@/components/ContactForm/contactForm";
 import { Layout } from "@/components/layout/Layout";
+import Head from "next/head";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,6 +9,9 @@ import { FaGithub } from "react-icons/fa";
 const Page = () => {
   return (
     <div className="w-full">
+      <Head>
+        <title>Contato!</title>
+      </Head>
       <Layout>
         <div className=" flex flex-col mt-8  items-center  min-h-[475px] md:flex-row justify-center gap-10">
           <div className="flex flex-col w-[300px] ">
