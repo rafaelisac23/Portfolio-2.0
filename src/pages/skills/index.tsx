@@ -24,7 +24,7 @@ const Page = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3 }}
           className="w-full min-h-screen  flex flex-col justify-center items-center"
         >
           <Image
