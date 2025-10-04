@@ -6,7 +6,7 @@ type Props = {
 
 export const CardProject = ({ item }: Props) => {
   return (
-    <div className="w-[300px] sm:w-[520px] rounded-lg p-2 bg-gray-300 flex flex-col justify-center items-center shadow-2xl shadow-gray-300 pb-6">
+    <div className="w-[300px] lg:w-[295px] xl:w-[400px] sm:w-[520px] rounded-lg p-2 bg-gray-300 flex flex-col justify-center items-center shadow-2xl shadow-gray-300 pb-6">
       <video
         src={item.img}
         autoPlay

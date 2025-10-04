@@ -52,7 +52,7 @@ const Page = () => {
         >
           <h1 className=" text-center  text-2xl   font-semibold ">Projetos</h1>
 
-          <section className="mt-14 flex flex-col  gap-12 w-full justify-center items-center pb-16">
+          <section className="mt-14 flex flex-col lg:grid lg:grid-cols-3 lg:justify-items-center  gap-12 w-full justify-center items-center pb-16 ">
             {CardSkillProjectsData.item.map((item, index) => (
               <CardProject item={item} key={index} />
             ))}

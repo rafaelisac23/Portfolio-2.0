@@ -8,6 +8,7 @@ import {
   CardSkillDataBaseData,
   CardSkillToolsData,
   CardSkillCursosData,
+  CardBackendToolsData,
 } from "@/utils/data/CardSkillData";
 import Head from "next/head";
 import Image from "next/image";
@@ -58,6 +59,7 @@ const Page = () => {
           {/*Conteudo Skills Mobile*/}
           <div className="w-full flex flex-col  justify-center items-center lg:hidden">
             <CardSkill CardSkillData={CardSkillLanguageData} />
+            <CardSkill CardSkillData={CardBackendToolsData} />
             <CardSkill CardSkillData={CardSkillFrontEndData} />
             <CardSkill CardSkillData={CardSkillDataBaseData} />
             <CardSkill CardSkillData={CardSkillToolsData} />
@@ -82,6 +84,7 @@ const Page = () => {
               {/*body */}
               <div className=" flex flex-col">
                 <SkillTableItem data={CardSkillLanguageData} />
+                <SkillTableItem data={CardBackendToolsData} />
                 <SkillTableItem data={CardSkillFrontEndData} />
                 <SkillTableItem data={CardSkillDataBaseData} />
                 <SkillTableItem data={CardSkillToolsData} />

@@ -114,6 +114,7 @@ const Page = () => {
               <ContactMe />
               <p className="mt-7 font-semibold">Ou</p>
               <h2 className="font-semibold">Baixe meu curriculo:</h2>
+
               <a
                 className="bg-gray-950 text-white px-3 py-2 mt-4 rounded-lg shadow-2xl shadow-gray-950 hover:scale-105"
                 href="/curriculo.pdf"

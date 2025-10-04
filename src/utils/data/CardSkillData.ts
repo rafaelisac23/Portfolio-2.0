@@ -42,12 +42,17 @@ export const CardSkillToolsData: CardSkillDataType = {
   ],
 };
 
+export const CardBackendToolsData: CardSkillDataType = {
+  title: "Backend",
+  item: [{ id: 1, text: "Node.js" }],
+};
+
 export const CardSkillCursosData: CardSkillDataType = {
   title: "Cursos",
   item: [
     { id: 1, text: "HTML e Css - Duração: 10 horas" },
     { id: 2, text: "Typescript - Duração: 10 horas" },
-    { id: 3, text: "ReactJs - B7WEB - Duração: 40 horas" },
+    { id: 3, text: "ReactJs - Duração: 40 horas" },
     { id: 4, text: "Administração Estratégica - Duração: 10 horas" },
     { id: 5, text: "Amazom Aws Cloud - Duração: Cursando" },
     { id: 6, text: "Javascript - Duração: 20 horas" },
@@ -88,6 +93,13 @@ export const CardSkillProjectsData: CardSkillDataType = {
         github: "https://github.com/rafaelisac23/My_Pokedex_project",
       },
       tools: ["#JavaScript", "#TailwindCSS", "#axios", "#React"],
+    },
+    {
+      id: 4,
+      text: "Este projeto foi desenvolvido em equipe com mais três colegas, onde criamos uma aplicação web integrada a um protótipo de tomada inteligente. A tomada é capaz de enviar em tempo real os dados de consumo de energia dos aparelhos conectados, que são processados e armazenados em um banco de dados. Na aplicação, o usuário pode visualizar seu consumo de forma intuitiva em dashboards interativos, além de contar com o suporte de um modelo de Inteligência Artificial para analisar os padrões de uso e enviar alertas personalizados, garantindo maior eficiência energética e uma melhor experiência no gerenciamento do consumo elétrico.",
+      title: "WattsUp",
+      img: "/images/wattsup.mp4",
+      tools: ["#JavaScript", "#TailwindCSS", "#axios", "#React", "#Typescript"],
     },
   ],
 };
