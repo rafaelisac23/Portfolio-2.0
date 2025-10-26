@@ -67,25 +67,25 @@ export const CardSkillProjectsData: CardSkillDataType = {
   item: [
     {
       id: 1,
-      text: "Projeto Criado para finalidades de auxilio aos usuarios da empresa Atacadão S/A,projeto voltado a centralizar as principais ferramentas de uso do dia a dia dos usuários",
+      text: "Projeto para centralizar ferramentas do dia a dia dos usuários da Atacadão S/A.",
       title: "Portal Atacadinho",
       img: "/images/atacadinhovideo.mp4",
       tools: ["#JavaScript", "#TailwindCSS", "#PHP"],
     },
     {
       id: 2,
-      text: "Este projeto foi desenvolvido com o objetivo de praticar meus conhecimentos em Front-End, utilizando ferramentas como ShadCN para a interface, Zod para validações de formulário e React Hook Form para gerenciamento de formulários. Com essas tecnologias, construí um site com funcionalidade de carrinho de compras.",
+      text: "Projeto de Front-End com carrinho de compras, usando ShadCN, Zod e React Hook Form.",
       title: "Loja Shadcn",
       img: "/images/shadcn.mp4",
       url: {
         deploy: "https://loja-shadcn.vercel.app/",
         github: "https://github.com/rafaelisac23/Loja-Shadcn",
       },
-      tools: ["#Shadcn", "#React", "#zod", "#React-hook-form", "#zustand"],
+      tools: ["#React", "#zod", "#React-hook-form", "#zustand"],
     },
     {
       id: 3,
-      text: "Neste projeto, utilizei Axios com o objetivo de aprender e praticar o consumo de APIs. A ideia foi explorar o gerenciamento de requisições, cache e estados assíncronos de forma eficiente no Front-End.",
+      text: "Projeto de Front-End focado no consumo de APIs com Axios, gerenciando requisições, cache e estados assíncronos.",
       title: "Pokedex",
       img: "/images/pokemonVideo.mp4",
       url: {
@@ -96,10 +96,21 @@ export const CardSkillProjectsData: CardSkillDataType = {
     },
     {
       id: 4,
-      text: "Este projeto foi desenvolvido em equipe com mais três colegas, onde criamos uma aplicação web integrada a um protótipo de tomada inteligente. A tomada é capaz de enviar em tempo real os dados de consumo de energia dos aparelhos conectados, que são processados e armazenados em um banco de dados. Na aplicação, o usuário pode visualizar seu consumo de forma intuitiva em dashboards interativos, além de contar com o suporte de um modelo de Inteligência Artificial para analisar os padrões de uso e enviar alertas personalizados, garantindo maior eficiência energética e uma melhor experiência no gerenciamento do consumo elétrico.",
+      text: "Aplicação web com tomada inteligente que monitora consumo de energia em tempo real e usa IA para otimização.",
       title: "WattsUp",
       img: "/images/wattsup.mp4",
-      tools: ["#JavaScript", "#TailwindCSS", "#axios", "#React", "#Typescript"],
+      tools: ["#TailwindCSS", "#axios", "#React"],
+    },
+    {
+      id: 5,
+      text: "Aplicação To-Do List com Node.js e React, criada para estudar e entender o funcionamento do front e back-end.",
+      title: "Gerenciador de Tarefas",
+      img: "/images/gtvideo.mp4",
+      tools: ["#TailwindCSS", "#NodeJs", "#React", "Axios"],
+      url: {
+        deploy: "https://frontend-gerenciador-one.vercel.app/menu",
+        github: "",
+      },
     },
   ],
 };

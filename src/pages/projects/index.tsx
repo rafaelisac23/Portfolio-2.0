@@ -52,10 +52,12 @@ const Page = () => {
         >
           <h1 className=" text-center  text-2xl   font-semibold ">Projetos</h1>
 
-          <section className="mt-14 flex flex-col lg:grid lg:grid-cols-3 lg:justify-items-center  gap-12 w-full justify-center items-center pb-16 ">
-            {CardSkillProjectsData.item.map((item, index) => (
-              <CardProject item={item} key={index} />
-            ))}
+          <section className="mt-14 w-full flex justify-center items-center pb-16 ">
+            <div className=" p-1 md:p-2 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 lg:justify-items-center gap-12 ">
+              {CardSkillProjectsData.item.map((item, index) => (
+                <CardProject item={item} key={index} />
+              ))}
+            </div>
           </section>
         </motion.div>
       </Layout>
